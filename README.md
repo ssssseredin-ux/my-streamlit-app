@@ -222,4 +222,4 @@ streamlit run app.py
 ## Источники
 https://www.who.int/ru/ - Данные и статьи Всемирной организации здравоохранения  
 https://www.kaggle.com/code/desalegngeb/heart-disease-predictions - Исследование решений и опыта на данных прогноза болезни сердца  
-https://cyberleninka.ru/article/n/analiz-effektivnosti-programmy-otsenka-riska-insulta-dlya-vyyavleniya-lits-s-vysokim-riskom-insulta/viewer - Исследование традиционных методов оценки риска  
+https://cyberleninka.ru/article/n/analiz-effektivnosti-programmy-otsenka-riska-insulta-dlya-vyyavleniya-lits-s-vysokim-riskom-insulta/viewer - Исследование традиционных методов оценки риска инсульта
