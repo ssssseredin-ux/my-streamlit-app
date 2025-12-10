@@ -59,11 +59,55 @@ npm run build
 ```
 
 ## Тестирование
-Какие инструменты тестирования использованы в проекте и как их запускать. Например:
+Данный проект может быть дополнительно протестирован с помощью модульных или интеграционных тестов для обеспечения корректной работы модели, обработки данных и интерфейса.
 
-Наш проект покрыт юнит-тестами Jest. Для их запуска выполните команду:
-```sh
-npm run test
+### Как реализовать тесты
+
+Поскольку проект использует Python, рекомендуется использовать стандартные библиотеки для тестирования, такие как `unittest` или популярные фреймворки `pytest`.
+
+### Пример простого теста модели
+
+Создайте файл `test_model.py` в папке `tests` или в корне проекта, например:
+
+```python
+import joblib
+import pandas as pd
+
+def test_model_prediction():
+    model = joblib.load('gradient_boosting_model.pkl')
+    test_input = pd.DataFrame({
+        'gender': [1], 
+        'age': [50],
+        'hypertension': [0],
+        'heart_disease': [0],
+        'ever_married': [1],
+        'work_type': [0],
+        'Residence_type': [1],
+        'avg_glucose_level': [100],
+        'smoking_status': [0]
+    })
+
+    prediction = model.predict(test_input)
+    probability = model.predict_proba(test_input)[0][1]
+
+    # Проверьте, что prediction — это либо 0, либо 1
+    assert prediction in [0, 1], "Prediction должна быть 0 или 1"
+    # Проверка вероятности
+    assert 0.0 <= probability <= 1.0, "Вероятность должна быть в диапазоне 0-1"
+```
+Как запускать тесты
+Убедитесь, что у вас установлен pytest:
+```bash
+pip install pytest
+```
+Запустите тесты командой:
+```bash
+pytest
+```
+или, если используете unittest:
+
+```bash
+python -m unittest discover -s tests
 ```
 
 ## Deploy и CI/CD
