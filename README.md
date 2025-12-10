@@ -163,4 +163,7 @@ streamlit run app.py
 - [Гречаник Кирилл](tg://resolve?domain=kirseredin) — Data Analyst 
 
 ## Источники
+https://www.who.int/ru/ - Данные и статьи Всемирной организации здравоохранения
+https://www.kaggle.com/code/desalegngeb/heart-disease-predictions - Исследование на данных прогноз болезни сердца
+
 Если вы чем-то вдохновлялись, расскажите об этом: где брали идеи, какие туториалы смотрели, ссылки на исходники кода. 
